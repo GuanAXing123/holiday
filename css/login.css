@@ -1,0 +1,29 @@
+
+.denglu{width:100%; height:60px;}
+.denglu_logo{width:1140px; height:60px; margin:auto;}
+.denglu_logo img{margin-left:50px; width:210px; height:58px;}
+.d_con{width:100%; padding-top:70px; background:#f7f2ee;}
+.d_coent{width:1140px; height:600px; margin:auto; position:relative;}
+.d_left{width:570px; margin-left:70px; height:500px; float:left;}
+.d_right{width:424px; height:559px; background:#fff; float:right;}
+.f_top{width:100%; height:50px; background:#f7f7f9;}
+.f_top a{width:49%; border-bottom:2px solid #f7f7f9; line-height:48px; text-align:center; height:48px; display:inline-block; text-decoration:none; font-size:18px; color:#afafaf;}
+.f_top a:hover{color:#000; border-bottom:2px solid #000;}
+form{width:304px; margin:auto; font-size:12px;}
+input{width:300px; margin-top:22px;}
+.username,.pwd{height:34px;}
+
+.inp2{display:none;}
+.username1,.pwd1{height:34px;}
+.pwd1{width:190px;}
+.yanzheng{display:inline-block; width:50px; border:1px solid #ccc;}
+form p{height:64px; line-height:64px;}
+.checkbox{width:17px;}
+.check{margin-left:8px; border:1px solid #ccc; width:100px; height:35px; font-size:14px; line-height:35px; text-align:center; display:inline-block;}
+form p a{float:right; color:#afafaf;}
+.login{width:100%; height:35px; border-radius:10px; background:#d2041f; color:#fff; border:0; font-size:18px;}
+.lianjie{width:100%; height:100px;}
+.lianjie img{width:100%; height:92px;}
+.saoma{width:140px; height:70px; float:right; background:url("../images/saoma.png") no-repeat 0 0; border:0;}
+.erwei{position:absolute; width:424px; display:none; height:559px; right:0; top:0;}
+.erwei img{width:100%; height:auto;}

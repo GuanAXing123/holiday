@@ -3,8 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-
+    <div class="denglu">
+        <div class="denglu_logo">
+            <img src="images/denglulogo.png" alt="">
+        </div>
+    </div>
+    <div class="d_con">
+        <div class="d_coent">
+            <div class="d_left">
+                <img src="images/denglu.png" alt="">
+            </div>
+            <div class="d_right">
+                <div class="f_top">
+                    <a class="active1">短信登录</a>
+                    <a class="active1">密码登录</a>
+                </div>
+                <form action="">
+                    <div class="inp1 active">
+                        <input class="username" type="text" placeholder="手机/邮箱/用户名">
+                        <input type="text" class="pwd" placeholder="密码">
+                    </div>
+                    <div class="inp2 active">
+                        <input class="username1" type="text" placeholder="手机号码">
+                        <div class="inline">
+                            <input type="text" class="pwd1" placeholder="短信验证码"><span class="check">获取短信验证码</span>
+                        </div>
+                    </div>
+                    <p>
+                        <input class="checkbox" type="checkbox">
+                        <span>两周内自动登录</span>
+                        <a href="">找回密码 | 注册账号</a>
+                    </p>
+                    <button class="login">登 录</button>
+                    <div class="lianjie">
+                        <img src="images/lianjie.png" alt="">
+                    </div>
+                </form>
+                <button class="saoma"></button>
+            </div>
+            <div class="erwei">
+                <img src="images/erwei.png" alt="">
+            </div>
+        </div>
+    </div>
+        <script src="js/lib/jquery-1.12.4.js"></script>
+        <script>
+            $(function () {
+                $(".f_top a").on("click", function () {
+                    $(".active").hide();
+                    $(".active").eq($(this).index()).show();
+                });
+//               二维码
+                $(".saoma").on("click", function () {
+                   $(".erwei").css({"display":"block"});
+               });
+                $(".erwei").on("click",function () {
+                    $(".erwei").css({
+                        "display":"none"
+                    });
+                });
+            });
+        </script>
 </body>
-</html>
