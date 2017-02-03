@@ -105,15 +105,64 @@
         </div>
     </div>
     <div class="banner">
-        <img src="images/" alt="">
+        <img src="images/top_01.jpg" alt="">
+        <img src="images/top_02.jpg" alt="">
+        <img src="images/top_03.jpg" alt="">
+        <img src="images/top_04.jpg" alt="">
+        <img src="images/top_05.jpg" alt="">
+        <img src="images/top_06a.jpg" alt="">
+        <div class="firstColum">
+            <div class="colum_wrap">
+                <div class="colum_box">
+                    <h3 style="text-align:center">
+                    <img src="images/work_t1.jpg" alt="">
+                    </h3>
+                    <ul class="item">
+                    <li>
+                        <a href="http://www.xiu.com/cx/183356.shtml"><img src="" alt=""><img src="images/work_01.jpg" alt=""></a>
+                    </li>
+                        <li>
+                            <a href="http://www.xiu.com/cx/183356.shtml"><img src="" alt=""><img src="images/work_02.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="http://www.xiu.com/cx/183356.shtml"><img src="" alt=""><img src="images/work_03.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="http://www.xiu.com/cx/183356.shtml"><img src="" alt=""><img src="images/work_04.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="http://www.xiu.com/cx/183356.shtml"><img src="" alt=""><img src="images/work_05.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="http://www.xiu.com/cx/183356.shtml"><img src="" alt=""><img src="images/work_06.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="http://www.xiu.com/cx/183356.shtml"><img src="" alt=""><img src="images/work_07.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="http://www.xiu.com/cx/183356.shtml"><img src="" alt=""><img src="images/work_08.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="http://www.xiu.com/cx/183356.shtml"><img src="" alt=""><img src="images/work_09.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="http://www.xiu.com/cx/183356.shtml"><img src="" alt=""><img src="images/work_10.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="http://www.xiu.com/cx/183356.shtml"><img src="" alt=""><img src="images/work_11.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="http://www.xiu.com/cx/183356.shtml"><img src="" alt=""><img src="images/work_12.jpg" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="picture">
 
-    </div>
-
-    <div class="footer">
-        <img src="images/foot.png" alt="">
-    </div>
+    <!--<div class="footer">-->
+        <!--<img src="images/foot.png" alt="">-->
+    <!--</div>-->
     <script src="js/lib/jquery-1.12.4.js"></script>
     <script>
         $(function () {
@@ -129,6 +178,28 @@
                 $(this).css({
                     "color":"#d7d7d7"
                 });
+            });
+//            topnav2
+            $(".topnav2 li").hover(function () {
+               $(this).css({
+                   "background":"#fff",
+                   "border-left":"1px solid #ccc",
+                   "border-right":"1px solid #ccc"
+               });
+                $(this).children(".menus").show();
+            }, function () {
+                $(this).css({
+                    "border":"0",
+                    "background":"#f7f7f7"
+                });
+                $(this).children(".menus").hide();
+//                有bug
+                if(500+$(this).children(".menus").width()> $(".topnav2").width()) {
+                    console.log("&&&"+$(this).children(".menus").offset().left+$(this).children(".menus").width());
+                    $(this).children(".menus").css({
+                        "left":"-300px"
+                    });
+                }
             });
         });
     </script>
