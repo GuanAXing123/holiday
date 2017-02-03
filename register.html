@@ -3,40 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        *{margin:0; padding:0;}
-        #container{width:600px; height:400px; background:peru; margin:auto;}
-        #lis{width:600px; height:42px;}
-        #lis li{float:left; width:90px; height:40px; margin-right:20px; border:1px solid #666; background:brown; color:#fff; font-size:16px; line-height:40px; text-align:center; list-style:none;}
-        #boxs{width:600px; height:300px; margin-top:20px;background:palegoldenrod; position:relative;}
-        .box{width:100%; height:300px; background:red; font-size:30px; line-height:300px; text-align:center; position:absolute; left:0; top:0;}
-    </style>
+
 </head>
 <body>
-    <div id="container">
-    <ul id="lis">
-        <li class="active">11</li>
-        <li>12</li>
-        <li>13</li>
-        <li>14</li>
-    </ul>
-    <div id="boxs">
-        <div class="box">1</div>
-        <div class="box">2</div>
-        <div class="box">3</div>
-        <div class="box">4</div>
-    </div>
-</div>
-    <script src="js/lib/jquery-1.12.4.js"></script>
-    <script>
-        $(function () {
-            $(".box").hide();
-            $(".box").first().show();
-            $("#lis li").on("click", function () {
-                $(".box").hide();
-                $(".box").eq($(this).index()).show();
-            });
-        });
-    </script>
 </body>
 </html>
