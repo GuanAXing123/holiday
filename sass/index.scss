@@ -21,7 +21,8 @@
 .nav ul li a:hover{color:red;}
 .nav2{width:100%; height:44px; background:#f7f7f7;}
 .topnav2{width:1200px; margin:auto; background:red;}
-.topnav2 ul{width:650px; height:44px; margin:auto; }
-.topnav2 li{height:44px; line-height:44px; text-align:center;list-style:none; float:left; padding-left:20px; padding-right:20px;}
+.topnav2 ul{width:650px; height:44px; margin:auto;}
+.topnav2 li{height:44px; line-height:44px; text-align:center;list-style:none; position:relative; float:left; padding-left:20px; padding-right:20px;}
+.menus{position:absolute; left:0; top:44px;}
 .footer{width:100%; height:auto;}
 .footer img{width:100%; height:100%;}
