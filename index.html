@@ -176,11 +176,57 @@
                 </div>
             </div>
         </div>
+        <div class="topic2">
+            <img src="images/topic_t.jpg" alt="">
+        </div>
+        <div class="topcontainer">
+            <ul class="item2">
+                <li><a href="http://www.xiu.com/cx/182130.shtml"><img src="images/0110beats_06.jpg" alt=""></a></li>
+                <li><a href="http://www.xiu.com/cx/182131.shtml"><img src="images/0110beats_01.jpg" alt=""></a></li>
+                <li><a href="http://www.xiu.com/cx/184115.shtml"><img src="images/0119beats_02.jpg" alt=""></a></li>
+                <li><a href="http://www.xiu.com/cx/184259.shtml"><img src="images/0119beats_03.jpg" alt=""></a></li>
+                <li><a href="http://www.xiu.com/cx/184931.shtml"><img src="images/0205beats_04.jpg" alt=""></a></li>
+                <li><a href="http://www.xiu.com/cx/185170.shtml"><img src="images/0205beats_05.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="topic3">
+            <img src="images/topic_m.jpg" alt="">
+        </div>
+        <div class="topic33">
+            <img src="images/0105auto.jpg" alt="">
+        </div>
+        <div class="topic4">
+            <img src="images/found_t.jpg" alt="">
+        </div>
+        <div class="topic44">
+            <ul class="item3">
+                <li><a href=""><img src="images/aa.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/bb.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/cc.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/dd.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/ee.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/ff.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/gg.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/a1.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/zz.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/nn.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/xx.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/mm.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/hh.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/jj.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/tt.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/vv.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/ll.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/qq.jpg" alt=""></a></li>
+            </ul>
+        </div>
     </div>
-
-    <!--<div class="footer">-->
-        <!--<img src="images/foot.png" alt="">-->
-    <!--</div>-->
+    <div class="footer">
+        <img src="images/foot.png" alt="">
+    </div>
+    <div class="foot22">
+        <img src="images/foot2.png" alt="">
+    </div>
     <script src="js/lib/jquery-1.12.4.js"></script>
     <script src="js/lib/swiper-3.4.1.jquery.min.js"></script>
     <script>
@@ -195,6 +241,24 @@
                 // 如果需要前进后退按钮
                 nextButton: '.swiper-button-next',
                 prevButton: '.swiper-button-prev'
+            });
+            // 吸顶
+            $(window).scroll(function () {
+                if($(document).scrollTop() > 140) {
+                    $(".nav").css({
+                        "background":"#666",
+                        "position":"fixed",
+                        "left":"30%",
+                        "top":"0",
+                        "margin-top":"0"
+                    });
+                } else {
+                    $(".nav").css({
+                        "position":"none",
+                        "background":"none",
+                        "margin-top":"44px"
+                    });
+                }
             });
             $(".topLeft li").hover(function () {
                if($(this).find($(".menu"))) {
@@ -225,7 +289,6 @@
                 $(this).children(".menus").hide();
 //                有bug
                 if(500+$(this).children(".menus").width()> $(".topnav2").width()) {
-                    console.log("&&&"+$(this).children(".menus").offset().left+$(this).children(".menus").width());
                     $(this).children(".menus").css({
                         "left":"-300px"
                     });
