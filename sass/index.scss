@@ -25,14 +25,21 @@
 .topnav2 li{height:44px; line-height:44px; text-align:center;list-style:none; position:relative; float:left; padding-left:20px; padding-right:20px;}
 .menus{position:absolute; left:0; top:44px; display:none;}
 .banner{width:100%;}
+.home_banner{width:1200px; height:86px; background:#fff url("../images/shortcut3a.jpg") no-repeat; margin:auto;}
+.shareb{width:250px; height:86px;}
+.newn{width:250px; height:86px;}
+.newgift{width:250px; height:86px;}
+.youq{width:215px; height:86px;}
+.home2{width:301px; height:40px; margin:auto; padding-bottom:20px;}
+.home2 img{width:301px; height:40px;}
 .banner img{width:100%; height:auto;}
 .firstColum{width:1200px; padding-top:100px; background:#31060d url("../images/y_bg_taa.jpg")no-repeat 25px 0; margin:auto;}
 .colum_wrap{width:1149px; background:url("../images/y_bg_b.jpg") no-repeat center bottom; padding-bottom:117px; overflow:hidden; margin-left:25px;}
 .colum_box{width:1149px; background:url("../images/y_bg_c.jpg") repeat-y center top;}
 //.firstColum img{width:1052px; margin:auto;}
 .item{width:1101px; padding:15px 0 0 48px; overflow:hidden;}
-.item li{float:left; list-style:none; width:334px; margin:0 11px 10px 0;}
-.item li a{width:334px; -webkit-transition:all 5s;}
+.item li{float:left; list-style:none;transition:all .5s ease; width:334px; margin:0 11px 10px 0;}
+.item li:hover{transform:translateY(-8px);}
 .item li a img{width:334px;}
 .footer{width:100%; height:auto;}
 .footer img{width:100%; height:100%;}

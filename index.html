@@ -5,6 +5,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="js/lib/swiper-3.4.1.min.css">
     <!--<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
     <!--<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
     <!--&lt;!&ndash; Latest compiled and minified CSS &ndash;&gt;-->
@@ -105,12 +106,29 @@
         </div>
     </div>
     <div class="banner">
-        <img src="images/top_01.jpg" alt="">
-        <img src="images/top_02.jpg" alt="">
-        <img src="images/top_03.jpg" alt="">
-        <img src="images/top_04.jpg" alt="">
-        <img src="images/top_05.jpg" alt="">
-        <img src="images/top_06a.jpg" alt="">
+        <div class="swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide"><a href="http://www.xiu.com/cx/185411.shtml"><img src="images/banner2.jpg" alt=""></a></li>
+                <li class="swiper-slide"><a href="http://www.xiu.com/cx/185370.shtml"><img src="images/banner1.jpg" alt=""></a></li>
+            </ul>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- 如果需要滚动条 -->
+            <!--<div class="swiper-scrollbar"></div>-->
+        </div>
+        <div class="home_banner">
+            <a class="shareb" href="http://www.xiu.com/cx/153125.shtml"></a>
+            <a class="newn" href="http://www.xiu.com/cx/153126.shtml"></a>
+            <a class="newgift" href="http://www.xiu.com/cx/184578.shtml"></a>
+            <a class="youq" href="http://my.xiu.com/v3/invitation/index?null"></a>
+        </div>
+        <div class="home2">
+            <img src="images/goods_t.jpg" alt="">
+        </div>
         <div class="firstColum">
             <div class="colum_wrap">
                 <div class="colum_box">
@@ -122,10 +140,10 @@
                         <a href="http://www.xiu.com/cx/183356.shtml"><img src="" alt=""><img src="images/work_01.jpg" alt=""></a>
                     </li>
                         <li>
-                            <a href="http://www.xiu.com/cx/183356.shtml"><img src="" alt=""><img src="images/work_02.jpg" alt=""></a>
+                            <a href="http://www.xiu.com/cx/183355.shtml"><img src="" alt=""><img src="images/work_02.jpg" alt=""></a>
                         </li>
                         <li>
-                            <a href="http://www.xiu.com/cx/183356.shtml"><img src="" alt=""><img src="images/work_03.jpg" alt=""></a>
+                            <a href="http://www.xiu.com/cx/183329.shtml"><img src="" alt=""><img src="images/work_03.jpg" alt=""></a>
                         </li>
                         <li>
                             <a href="http://www.xiu.com/cx/183356.shtml"><img src="" alt=""><img src="images/work_04.jpg" alt=""></a>
@@ -164,8 +182,20 @@
         <!--<img src="images/foot.png" alt="">-->
     <!--</div>-->
     <script src="js/lib/jquery-1.12.4.js"></script>
+    <script src="js/lib/swiper-3.4.1.jquery.min.js"></script>
     <script>
         $(function () {
+            var mySwiper = new Swiper ('.swiper-container', {
+                direction: 'horizontal',
+                loop: true,
+                autoplay:4000,
+                // 如果需要分页器
+                pagination: '.swiper-pagination',
+                paginationClickable:true,
+                // 如果需要前进后退按钮
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev'
+            });
             $(".topLeft li").hover(function () {
                if($(this).find($(".menu"))) {
                    $(this).css({
