@@ -1,0 +1,28 @@
+@charset "utf-8";
+.line{width:1000px; background:#fff; height:30px; margin:auto; border-bottom:1px solid #e5e5e5;}
+.containerbox{width:1000px; margin:auto; padding-top:10px; position:relative;}
+.containerbox:after{content:"."; clear:both; height:0; display:block; overflow:hidden; visibility:hidden;}
+.smallKuang{float:left; border-left:1px solid #ccc; border-right:1px solid #ccc; width:402px; height:536px;}
+
+.smallImage{width:402px; height:536px;}
+.smallView{width:120px; background:#ccc; opacity:.3; height:120px; position:absolute; left:0; top:10px; display:none;}
+.bigKuang{width:402px; background:#afafaf; height:535px; border:1px solid #ccc; position:absolute; left:412px; top:10px; display:none; overflow:hidden;}
+.bigImage{width:900px; height:1200px; position:absolute; left:402px; top:10px; overflow:hidden;}
+.small{width:405px; height:103px; margin-top:8px; position:absolute; left:0; top:546px;}
+.small ul{width:405px; height:103px;}
+.small li{float:left; width:76px; height:98px; list-style:none; border:3px solid #ccc; margin:7px 8px 4px 8px;}
+.small li img{width:100%; height:100%;}
+.small li:hover{border:3px solid orangered;}
+
+.rightBox{float:right; width:578px;}
+.luan{width:578px; height:194px;}
+.luan img{width:100%; height:100%;}
+.jiben{font-size:14px;}
+.yanse{width:40px; color:#666;  height:30px; font-weight:normal; line-height:30px; text-align:center; display:inline-block; margin-bottom:20px; border:2px solid #ccc; margin-left:16px;}
+.yanse:hover{border:2px solid orangered;}
+.chicun{width:26px; color:#666; height:26px; display:inline-block; border:1px solid #ccc; line-height:26px; text-align:center; margin:6px 10px 20px 4px;}
+.chicun:hover{border:1px solid orangered;}
+.fuhao{width:20px; height:20px; text-align:center; line-height:14px; display:inline-block; border:1px solid #ccc; background:#fff; margin-left:6px; margin-right:6px;}
+.zhi{width:50px; height:20px; border:1px solid #ccc; display:inline-block;}
+.xia{width:578px; height:289px;}
+.xia img{width:100%; height:100%;}

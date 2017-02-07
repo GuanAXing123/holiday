@@ -1,10 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <script src="js/lib/angular.min.js"></script>
 </head>
 <body>
-
+    <div class="top22"></div>
+    <div class="line"></div>
+    <div class="containerbox">
+        <div class="smallKuang">
+            <img class="smallImage" src="images/g1.jpg" alt="">
+            <div class="smallView"></div>
+        </div>
+        <div class="bigKuang">
+            <img class="bigImage" src="" alt="">
+        </div>
+        <div class="small">
+            <ul>
+                <li><a href=""><img src="images/small1.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/small2.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/small3.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/small4.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="rightBox">
+            <div class="luan">
+                <img src="images/luan.png" alt="">
+            </div>
+            <div class="jiben">
+                <p>颜 色:<b class="yanse">红色</b></p>
+                <p>尺 码：<span class="chicun">S</span><span class="chicun">M</span><span class="chicun">L</span><span class="chicun">XL</span></p>
+                <div ng-controller="ctrl">数 量 :<button class="fuhao" ng-click="clickMe = clickMe - 1">-</button><input class="zhi" ng-model="clickMe"><button class="fuhao" ng-click="clickMe = clickMe + 1">+</button>件</div>
+            </div>
+            <div class="xia">
+                <img src="images/xia.png" alt="">
+            </div>
+        </div>
+    </div>
 </body>
+    <script src="js/lib/jquery-1.12.4.js"></script>
+    <script>
+        var app = angular.module("myApp",[]);
+        app.controller("ctrl",["$scope", function ($scope) {
+            $scope.clickMe = 0;
+            if($scope.clickMe < 0) {
+                    $scope.clickMe = 0;
+                }
+    }]);
+        $(function () {
+            $(".top22").load("header.html");
+            $(".smallKuang").on("mouseenter", function (e) {
+                e = e || window.event;
+                $(".smallView").show();
+                $(".bigKuang").show();
+                $(".bigImage").attr("src",$(".smallImage").attr("src"));
+                $(document).on("mousemove", function (e) {
+                    e = e || window.event;
+                    var $left = e.pageX - $(".smallKuang").offset().left - $(".smallView").width()/2;
+                    var $top = e.pageY - $(".smallKuang").offset().top - $(".smallView").height()/2;
+                    if($left < 0){$left = 0;}
+                    if($top < 0) {$top = 0;}
+                    if($top >= $(".smallKuang").height() - $(".smallView").height()) {
+                        $top = $(".smallKuang").height() - $(".smallView").height();
+            }
+                    if($left >= $(".smallKuang").width() - $(".smallView").width()){
+                        $left = $(".smallKuang").width() - $(".smallView").width()
+                    }
+                    $(".smallView").css({"left":$left,"top":$top});
+                    $_bigLeft = 1.5 * $left;
+                    $_bigTop = 1.5 * $top;
+                    $(".bigImage").css({
+                        "left":-$_bigLeft,
+                        "top":-$_bigTop
+                    });
+                });
+//                   smallView 的宽和高
+//                    var $_width = $(".smallImage").width() * $(".bigKuang").width() / $(".bigImage").width();
+//                    var $_height = $(".smallImage").height() * $(".bigKuang").height() / $(".bigImage").height();
+//                    $(".smallView").css({
+//                        "width":$_width,
+//                        "height":$_height
+//                    });
+////                bigImageLeft
+//                    var $_bigLeft = $(".smallView").position().left * $(".bigImage").width() / $(".smallImage").width();
+//                    var $_bigTop = $(".smallView").position().top * $(".bigImage").height() / $(".smallImage").height();
+//                    console.log(-$_bigLeft,-$_bigTop)
+//                $(".bigImage").css({
+//                        "left":-$_bigLeft,
+//                        "top":-$_bigTop
+//                    });
+                });
+            });
+            $(".smallKuang").on("mouseleave", function () {
+                $(".smallView").hide();
+                $(".bigKuang").hide();
+            });
+            $(".small li img").hover(function () {
+                $(".smallImage").attr("src",$(this).attr("src"));
+        });
+    </script>
 </html>

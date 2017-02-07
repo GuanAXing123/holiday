@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/public.css">
+</head>
+<body>
+    <div class="top">
+    <div class="topNav">
+        <div class="topLeft">
+            <ul>
+                <li><a href="login.html">登录/注册</a></li>
+                <li><a href="shopcar.html">购物袋0件</a></li>
+                <li>我的走秀
+                    <div class="menu">
+                        <a href="">我的订单</a>
+                        <a href="">自助退货</a>
+                        <a href="">我的收藏</a>
+                        <a href="">帮助中心</a>
+                        <a href="">全部吐槽</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="mid">
+            <img src="images/indexlogo.png" alt="">
+        </div>
+        <div class="right">
+            <input type="text" placeholder="请 Oppening Ceremony试试">
+        </div>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="">首页</a></li>
+            <li><a href="">新品</a></li>
+            <li><a href="">男士</a></li>
+            <li><a href="">女士</a></li>
+            <li><a href="">品牌</a></li>
+            <li><a href="">发现</a></li>
+            <li><a href="">专题</a></li>
+            <li><a href="">手机走秀</a></li>
+        </ul>
+    </div>
+</div>
+    <div class="nav2">
+        <div class="topnav2">
+            <ul>
+                <li>包袋
+                    <div class="menus">
+                        <img src="images/nav1.png" alt="">
+                    </div>
+                </li>
+                <li>服装
+                    <div class="menus">
+                        <img src="images/nav2.png" alt="">
+                    </div>
+                </li>
+                <li>鞋靴
+                    <div class="menus">
+                        <img src="images/nav3.png" alt="">
+                    </div>
+                </li>
+                <li>腕表
+                    <div class="menus">
+                        <img src="images/nav4.png" alt="">
+                    </div>
+                </li>
+                <li>配饰
+                    <div class="menus">
+                        <img src="images/nav5.png" alt="">
+                    </div>
+                </li>
+                <li>妆品
+                    <div class="menus">
+                        <img src="images/nav6.png" alt="">
+                    </div>
+                </li>
+                <li>生活
+                    <div class="menus">
+                        <img src="images/nav7.png" alt="">
+                    </div>
+                </li>
+                <li>婴童
+                    <div class="menus">
+                        <img src="images/nav8.png" alt="">
+                    </div>
+                </li>
+                <li>豪车
+                    <div class="menus">
+                        <img src="images/nav9.png" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/lib/angular.min.js"></script>
+    <script>
+        $(".topLeft li").hover(function () {
+            if($(this).find($(".menu"))) {
+                $(this).css({
+                    "color":"#333"
+                });
+                $(this).children($(".menu")).show();
+            }
+        }, function () {
+            $(".menu").hide();
+            $(this).css({
+                "color":"#d7d7d7"
+            });
+        });
+        //            topnav2
+        $(".topnav2 li").hover(function () {
+            $(this).css({
+                "background":"#fff",
+                "border-left":"1px solid #ccc",
+                "border-right":"1px solid #ccc"
+            });
+            $(this).children(".menus").show();
+        }, function () {
+            $(this).css({
+                "border":"0",
+                "background":"#f7f7f7"
+            });
+            $(this).children(".menus").hide();
+//                有bug
+            if(530+$(this).children(".menus").width()> $(".topnav2").width()) {
+                $(this).children(".menus").css({
+                    "left":"-300px"
+                });
+            }
+        });
+    </script>
+</body>
+</html>
