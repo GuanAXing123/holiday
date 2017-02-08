@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -21,12 +21,46 @@
             </ul>
         </div>
     </div>
+    <div class="Eunne">
+        <div class="eunne1">
+            <span class="biao1">Eunne</span><a class="more" href="">更多</a>
+        </div>
+        <div class="eunnes">
 
+        </div>
+        <!--<dl>-->
+            <!--<dt>-->
+                <!--<a href="">-->
+                    <!--<img src="images/n1.jpg" alt="">-->
+                <!--</a>-->
+                <!--<div class="chi">-->
+                    <!--可售尺码：-->
+                    <!--<ul>-->
+                        <!--<li>S</li>-->
+                        <!--<li>M</li>-->
+                        <!--<li>L</li>-->
+                        <!--<li>XL</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</dt>-->
+            <!--<dd>-->
+                <!--<p>女士经典挺括棉A字型显瘦中袖黑色外套</p>-->
+                <!--<span class = "price">￥669</span>-->
+            <!--</dd>-->
+        <!--</dl>-->
+        <picture-component></picture-component>
+    </div>
     <script src="js/lib/jquery-1.12.4.js"></script>
     <script>
         $(function () {
-        $(".top1").load("header.html");
+            $(".top1").load("header.html");
+            $(".Eunne dt").hover(function () {
+                $(".chi").show();
+            },function () {
+                $(".chi").hide();
+            });
         });
+
 </script>
 </body>
 </html>
