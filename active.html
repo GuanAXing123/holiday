@@ -5,6 +5,11 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/active.css">
     <link rel="stylesheet" href="css/header.css">
+    <script src="js/lib/angular.min.js"></script>
+
+    <script src="js/app/picture-module/picture.module.js"></script>
+    <script src="js/app/picture-module/picture.component.js"></script>
+    <script src="js/app/app.module.js"></script>
 </head>
 <body>
     <div class="top1"></div>
@@ -26,7 +31,7 @@
             <span class="biao1">Eunne</span><a class="more" href="">更多</a>
         </div>
         <div class="eunnes">
-
+            <picture-component></picture-component>
         </div>
         <!--<dl>-->
             <!--<dt>-->
@@ -48,17 +53,16 @@
                 <!--<span class = "price">￥669</span>-->
             <!--</dd>-->
         <!--</dl>-->
-        <picture-component></picture-component>
     </div>
     <script src="js/lib/jquery-1.12.4.js"></script>
     <script>
         $(function () {
             $(".top1").load("header.html");
-            $(".Eunne dt").hover(function () {
-                $(".chi").show();
-            },function () {
-                $(".chi").hide();
-            });
+//            $(".eunnes dt").hover(function () {
+//                $(".chi").show();
+//            },function () {
+//                $(".chi").hide();
+//            });
         });
 
 </script>

@@ -1,0 +1,20 @@
+<dl ng-repeat="list in $ctrl.lists">
+    <dt>
+        <a href="">
+            <img ng-src={{list.imgUrl}} alt="">
+        </a>
+        <div class="chi">
+        可售尺码：
+            <ul>
+                <li>S</li>
+                <li>M</li>
+                <li>L</li>
+                <li>XL</li>
+            </ul>
+        </div>
+    </dt>
+    <dd>
+        <p ng-bind="list.des"></p>
+        <span ng-bind="list.price"></span>
+    </dd>
+</dl>
